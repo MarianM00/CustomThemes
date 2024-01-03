@@ -1,0 +1,77 @@
+﻿<Window
+    x:Class="CustomThemes.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:CustomThemes"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="MainWindow"
+    Width="800"
+    Height="450"
+    mc:Ignorable="d">
+    <Grid>
+        <Menu VerticalAlignment="Top">
+            <MenuItem Header="Themes">
+                <MenuItem
+                    Uid="0"
+                    Click="ChangeTheme"
+                    Header="Soft Dark (default)">
+                    <MenuItem.Icon>
+                        <Rectangle
+                            Fill="#FF2A2A2A"
+                            Stroke="#FF404040"
+                            StrokeLineJoin="Round"
+                            StrokeThickness="2">
+                            <Rectangle.Effect>
+                                <DropShadowEffect
+                                    BlurRadius="5"
+                                    Opacity="0.64"
+                                    ShadowDepth="2"
+                                    Color="Black" />
+                            </Rectangle.Effect>
+                        </Rectangle>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem
+                    Uid="1"
+                    Click="ChangeTheme"
+                    Header="Light">
+                    <MenuItem.Icon>
+                        <Rectangle
+                            Fill="#FFE8E8E8"
+                            Stroke="#FF848484"
+                            StrokeLineJoin="Round"
+                            StrokeThickness="2">
+                            <Rectangle.Effect>
+                                <DropShadowEffect
+                                    BlurRadius="5"
+                                    Opacity="0.64"
+                                    ShadowDepth="2"
+                                    Color="Black" />
+                            </Rectangle.Effect>
+                        </Rectangle>
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+        </Menu>
+        <StackPanel>
+            <Button
+                Height="40"
+                Margin="30"
+                Command="{Binding AddContentCommand}"
+                Content="A Button Here" />
+            <ToggleButton
+                Height="40"
+                Margin="5"
+                Content="A toggle button"
+                IsChecked="{Binding ElementName=CheckBox1, Path=IsChecked, Mode=TwoWay}" />
+            <CheckBox
+                x:Name="CheckBox1"
+                Margin="5"
+                Content="A CheckBox Here" />
+            <CheckBox Margin="5" Content="A CheckBox Here" />
+            <CheckBox Margin="5" Content="A CheckBox Here" />
+            <CheckBox Margin="5" Content="A CheckBox Here" />
+        </StackPanel>
+    </Grid>
+</Window>
