@@ -8,4 +8,16 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="SplashScreen\Image\shuttle.png" />
+    <None Remove="SplashScreen\Image\test.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="SplashScreen\Image\shuttle.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="SplashScreen\Image\test.png" />
+  </ItemGroup>
+
 </Project>

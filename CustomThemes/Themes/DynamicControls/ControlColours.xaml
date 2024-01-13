@@ -1,0 +1,46 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!--  region Window  -->
+    <SolidColorBrush x:Key="Window.Static.Background" Color="{DynamicResource Window.Background}" />
+    <SolidColorBrush x:Key="Window.Static.Border" Color="{DynamicResource Window.TitleBar}" />
+    <SolidColorBrush x:Key="Window.Static.Foreground" Color="{DynamicResource Generic.Foreground}" />
+    <SolidColorBrush x:Key="Window.Static.Title.Background" Color="{DynamicResource Generic.Foreground}" />
+    <!--  endregion Window  -->
+
+    <!--  region Button  -->
+    <SolidColorBrush x:Key="Button.Static.Background" Color="{DynamicResource Generic.Background}" />
+    <SolidColorBrush x:Key="Button.Static.Border" Color="{DynamicResource Generic.Border}" />
+    <SolidColorBrush x:Key="Button.MouseOver.Background" Color="{DynamicResource Generic.MouseOver.Background}" />
+    <SolidColorBrush x:Key="Button.MouseOver.Border" Color="{DynamicResource Generic.MouseOver.Border}" />
+    <SolidColorBrush x:Key="Button.Pressed.Background" Color="{DynamicResource Generic.Pressed.Background}" />
+    <SolidColorBrush x:Key="Button.Pressed.Border" Color="{DynamicResource Generic.Pressed.Border}" />
+    <SolidColorBrush x:Key="Button.Disabled.Background" Color="{DynamicResource Generic.Disabled.Background}" />
+    <SolidColorBrush x:Key="Button.Disabled.Border" Color="{DynamicResource Generic.Disabled.Border}" />
+    <SolidColorBrush x:Key="Button.Static.Foreground" Color="{DynamicResource Generic.Foreground}" />
+    <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="{DynamicResource Generic.Disabled.Foreground}" />
+    <SolidColorBrush x:Key="Button.Defaulted.Background" Color="{DynamicResource Generic.Defaulted.Background}" />
+    <SolidColorBrush x:Key="Button.Defaulted.Border" Color="{DynamicResource Generic.Defaulted.Border}" />
+    <!--  endregion Button  -->
+
+    <!--  region ComboBox  -->
+    <SolidColorBrush x:Key="OptionMark.Static.Background" Color="{DynamicResource Generic.Background}" />
+    <SolidColorBrush x:Key="OptionMark.Static.Border" Color="{DynamicResource Generic.Foreground}" />
+    <SolidColorBrush x:Key="OptionMark.MouseOver.Background" Color="{DynamicResource Generic.Disabled.Foreground}" />
+    <SolidColorBrush x:Key="OptionMark.MouseOver.Border" Color="{DynamicResource Generic.Disabled.Border}" />
+    <SolidColorBrush x:Key="OptionMark.Disabled.Background" Color="{DynamicResource Generic.Disabled.Background}" />
+    <SolidColorBrush x:Key="OptionMark.Disabled.Border" Color="{DynamicResource Generic.Disabled.Border}" />
+    <SolidColorBrush x:Key="OptionMark.Pressed.Background" Color="{DynamicResource Generic.Background}" />
+    <SolidColorBrush x:Key="OptionMark.Pressed.Border" Color="{DynamicResource Generic.Background}" />
+    <SolidColorBrush x:Key="OptionMark.Static.Glyph" Color="{DynamicResource Generic.ComboBox.Marker}" />
+    <SolidColorBrush x:Key="OptionMark.Pressed.Glyph" Color="{DynamicResource Generic.ComboBox.Marker}" />
+    <SolidColorBrush x:Key="OptionMark.MouseOver.Glyph" Color="{DynamicResource Generic.ComboBox.Marker}" />
+    <SolidColorBrush x:Key="OptionMark.Disabled.Glyph" Color="{DynamicResource Generic.ComboBox.Marker}" />
+
+    <!--  endregion ComboBox  -->
+
+    <!--  region Menu&MenuItem  -->
+    <SolidColorBrush x:Key="Menu.Foreground" Color="{DynamicResource Generic.Foreground}" />
+    <SolidColorBrush x:Key="Popup.Static.Background" Color="{DynamicResource Generic.Background}" />
+    <!--  endregion Menu&MenuItem  -->
+
+</ResourceDictionary>

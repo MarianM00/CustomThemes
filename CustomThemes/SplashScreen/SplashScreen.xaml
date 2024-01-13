@@ -1,0 +1,134 @@
+﻿<Window
+    x:Class="CustomThemes.SplashScreen.SplashScreen"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:CustomThemes.SplashScreen"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="SplashScreen"
+    Width="500"
+    Height="400"
+    AllowsTransparency="True"
+    Background="Transparent"
+    WindowStartupLocation="CenterScreen"
+    WindowStyle="None"
+    mc:Ignorable="d">
+    <Window.Resources>
+        <SolidColorBrush x:Key="ProgressBar.Progress" Color="#FF3C52C8" />
+        <SolidColorBrush x:Key="ProgressBar.Background" Color="#FFE6E6E6" />
+        <SolidColorBrush x:Key="ProgressBar.Border" Color="#FFBCBCBC" />
+        <Style x:Key="ProgressBarStyle1" TargetType="{x:Type ProgressBar}">
+            <Setter Property="Foreground" Value="{StaticResource ProgressBar.Progress}" />
+            <Setter Property="Background" Value="{StaticResource ProgressBar.Background}" />
+            <Setter Property="BorderBrush" Value="{StaticResource ProgressBar.Border}" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ProgressBar}">
+                        <Grid x:Name="TemplateRoot">
+                            <Border
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}" />
+                            <Rectangle x:Name="PART_Track" />
+                            <Grid
+                                x:Name="PART_Indicator"
+                                HorizontalAlignment="Left"
+                                ClipToBounds="true">
+                                <Rectangle
+                                    x:Name="Indicator"
+                                    Fill="{TemplateBinding Foreground}"
+                                    RadiusX="5"
+                                    RadiusY="5" />
+                                <Rectangle
+                                    x:Name="Animation"
+                                    Fill="{TemplateBinding Foreground}"
+                                    RadiusX="5"
+                                    RadiusY="5"
+                                    RenderTransformOrigin="0.5,0.5">
+                                    <Rectangle.RenderTransform>
+                                        <TransformGroup>
+                                            <ScaleTransform />
+                                            <SkewTransform />
+                                            <RotateTransform />
+                                            <TranslateTransform />
+                                        </TransformGroup>
+                                    </Rectangle.RenderTransform>
+                                </Rectangle>
+                            </Grid>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="Orientation" Value="Vertical">
+                                <Setter TargetName="TemplateRoot" Property="LayoutTransform">
+                                    <Setter.Value>
+                                        <RotateTransform Angle="-90" />
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                            <Trigger Property="IsIndeterminate" Value="true">
+                                <Setter TargetName="Indicator" Property="Visibility" Value="Collapsed" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Border
+        Background="Transparent"
+        BorderBrush="{x:Null}"
+        BorderThickness="0">
+        <Border
+            Background="#FF353B53"
+            BorderBrush="{x:Null}"
+            CornerRadius="20">
+            <Grid Background="{x:Null}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.3*" />
+                    <RowDefinition Height="3.5*" />
+                    <RowDefinition Height="1.5*" />
+                    <RowDefinition Height="1*" />
+                </Grid.RowDefinitions>
+                <Image Grid.Row="1" Source="Image/test.png" />
+                <TextBlock
+                    Grid.Row="2"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontFamily="Font/#Dosis"
+                    FontSize="35"
+                    FontStyle="Italic"
+                    Foreground="#FF5FD8FB"
+                    Text="Loading ..." />
+                <Border
+                    Grid.Row="3"
+                    Width="320"
+                    Height="20"
+                    BorderBrush="White"
+                    BorderThickness="2"
+                    CornerRadius="5">
+                    <Grid>
+                        <ProgressBar
+                            x:Name="pbStatus"
+                            Height="20"
+                            VerticalAlignment="Center"
+                            Background="{x:Null}"
+                            BorderBrush="{x:Null}"
+                            Maximum="100"
+                            Minimum="0"
+                            Opacity="1"
+                            OverridesDefaultStyle="False"
+                            Style="{DynamicResource ProgressBarStyle1}"
+                            Value="{Binding PercentProccess}" />
+                        <TextBlock
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            FontSize="14"
+                            FontWeight="Bold"
+                            Foreground="White"
+                            Text="{Binding ElementName=pbStatus, Path=Value, StringFormat={}{0:0}%}" />
+                    </Grid>
+                </Border>
+            </Grid>
+        </Border>
+    </Border>
+</Window>

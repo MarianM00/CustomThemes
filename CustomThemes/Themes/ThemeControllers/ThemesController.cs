@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CustomThemes.Themes.Extensions;
+using CustomThemes.Themes.ThemeEnum;
 using System.Windows;
-using CustomThemes.Themes.ThemeHelper;
 
 namespace CustomThemes.Themes.ThemesController
 {
@@ -40,7 +36,7 @@ namespace CustomThemes.Themes.ThemesController
             };
             ControlColours = new ResourceDictionary()
             {
-                Source = new Uri("/CustomThemes;component/Themes/DinamycControls/ControlColours.xaml", UriKind.Relative)
+                Source = new Uri("/CustomThemes;component/Themes/DynamicControls/ControlColours.xaml", UriKind.Relative)
             };
 
         }

@@ -3,13 +3,13 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="clr-namespace:CustomThemes"
-    StartupUri="MainWindow.xaml">
+    StartupUri="/SplashScreen/SplashScreen.xaml">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="/Themes/ThemeStyle/SoftDark.xaml" />
-                <ResourceDictionary Source="/Themes/DinamycControls/ControlColours.xaml" />
-                <ResourceDictionary Source="/Themes/DinamycControls/Controls.xaml" />
+                <ResourceDictionary Source="/Themes/DynamicControls/ControlColours.xaml" />
+                <ResourceDictionary Source="/Themes/DynamicControls/Controls.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

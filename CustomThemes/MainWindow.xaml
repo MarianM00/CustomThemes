@@ -1,20 +1,22 @@
-﻿<Window
+﻿<Window Style="{DynamicResource CustomWindow}"
     x:Class="CustomThemes.MainWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:CustomThemes"
+    xmlns:model="clr-namespace:CustomThemes.ViewModels"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="MainWindow"
-    Width="800"
-    Height="450"
+    Width="600"
+    Height="800"
     mc:Ignorable="d">
     <Grid>
         <Menu VerticalAlignment="Top">
             <MenuItem Header="Themes">
                 <MenuItem
                     Uid="0"
-                    Click="ChangeTheme"
+                    Command="{Binding ChangeThemeCommand}"
+                    CommandParameter="SoftDark"
                     Header="Soft Dark (default)">
                     <MenuItem.Icon>
                         <Rectangle
@@ -34,7 +36,8 @@
                 </MenuItem>
                 <MenuItem
                     Uid="1"
-                    Click="ChangeTheme"
+                    Command="{Binding ChangeThemeCommand}"
+                    CommandParameter="Light"
                     Header="Light">
                     <MenuItem.Icon>
                         <Rectangle
@@ -56,9 +59,15 @@
         </Menu>
         <StackPanel>
             <Button
+                
                 Height="40"
                 Margin="30"
-                Command="{Binding AddContentCommand}"
+                Content="A Button Here" />
+
+            <Button
+               
+                Height="40"
+                Margin="30"
                 Content="A Button Here" />
             <ToggleButton
                 Height="40"

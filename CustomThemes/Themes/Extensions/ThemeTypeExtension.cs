@@ -1,24 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CustomThemes.Themes.ThemeEnum;
 
-namespace CustomThemes.Themes.ThemeHelper
+namespace CustomThemes.Themes.Extensions
 {
-
-    /// <summary>
-    /// Here add a new theme
-    /// </summary>
-    public enum ThemeType
-    {
-        SoftDark,
-        LightTheme,
-    }
-
-    /// <summary>
-    /// Extension method for enum
-    /// </summary>
     public static class ThemeTypeExtension
     {
         public static string GetName(this ThemeType type)
