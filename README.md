@@ -3,11 +3,11 @@
 
 Custom template is an application made in wpf, which has 2 themes dark and light mode.
 
-
-
-
 Give me 5 minutes and you won't regret it, you will understand how the application works and you can make your own template.
 
+## 🍿 Video
+
+https://github.com/MarianM00/CustomThemes/assets/20222415/01297c39-8ce9-4835-91bf-764d42762060
 
 ## Project structure
 
